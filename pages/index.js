@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>
+        <div className="bg-red-500">
           <p>Test</p>
         </div>
       </main>

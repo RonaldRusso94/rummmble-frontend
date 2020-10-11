@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        '14': '3.5rem',
+        14: '3.5rem',
       },
       borderRadius: {
-        'xl': '0.75rem',
+        xl: '0.75rem',
         '2xl': '1rem',
       },
-    }
+    },
   },
   variants: {},
   plugins: [],
-}
+};

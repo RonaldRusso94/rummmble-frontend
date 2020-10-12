@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
-import ProfileThumbnail from "../components/layout/Profile/ProfileThumbnail";
-import ProfileSidebar from "../components/layout/Profile/ProfileSidebar";
+import ProfileThumbnail from "../components/Profile/ProfileBanner";
+import ProfileSidebar from "../components/Profile/ProfileSidebar";
 
 export default function Profile() {
   return (

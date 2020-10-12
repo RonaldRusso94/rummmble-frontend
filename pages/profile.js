@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Layout from "../components/layout/Layout";
-import ProfileThumbnail from "../components/Profile/ProfileBanner";
-import ProfileSidebar from "../components/Profile/ProfileSidebar";
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import ProfileBanner from '../components/Profile/ProfileBanner';
+import ProfileSidebar from '../components/Profile/ProfileSidebar';
 
 export default function Profile() {
   return (
@@ -12,8 +12,8 @@ export default function Profile() {
       </Head>
 
       <Layout>
-        <main className="h-screen text-center text-white">
-          <ProfileThumbnail />
+        <main className=" text-center text-white">
+          <ProfileBanner />
           <ProfileSidebar />
         </main>
       </Layout>

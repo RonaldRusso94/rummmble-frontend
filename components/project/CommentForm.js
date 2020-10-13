@@ -26,10 +26,10 @@ const CommentForm = () => {
           ref={register}
           rows={3}
           name="comment"
-          className="mx-4 p-2 text-lg w-11/12 rounded-t-md text-black focus:outline-none"
+          className="p-2 text-lg w-full rounded-t-md text-black focus:outline-none"
           placeholder="Write something nice..."
         />
-        <div className="w-11/12 flex justify-evenly">
+        <div className="w-full flex">
           <button type="submit" className="w-1/2 h-8 rounded-bl-md bg-blue-400 transition duration-150 hover:bg-blue-300 focus:outline-none">
             Post
           </button>

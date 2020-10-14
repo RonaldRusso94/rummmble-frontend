@@ -50,24 +50,22 @@ export default function Browse() {
                 />
               </div>
             </div>
-
-            <Grid className="text-white">
-              {projects.map((project, index) => (
-                <ProjectCard
-                  key={`${project.title}-${index}`}
-                  title={project.title}
-                  description={project.description}
-                  thumbnailSrc={project.thumbnailSrc}
-                  tags={project.tags}
-                  numOfComments={project.numOfComments}
-                  numOfLikes={project.numOfLikes}
-                  numOfShares={project.numOfShares}
-                />
-              ))}
-              <div>Welcome to rummmble</div>
-              <div>this is a test grid</div>
-              <div>it works responsively!</div>
-            </Grid>
+            <div className="px-24 pt-12">
+              <Grid>
+                {projects.map((project, index) => (
+                  <ProjectCard
+                    key={`${project.title}-${index}`}
+                    title={project.title}
+                    description={project.description}
+                    thumbnailSrc={project.thumbnailSrc}
+                    tags={project.tags}
+                    numOfComments={project.numOfComments}
+                    numOfLikes={project.numOfLikes}
+                    numOfShares={project.numOfShares}
+                  />
+                ))}
+              </Grid>
+            </div>
           </div>
         </main>
       </Layout>

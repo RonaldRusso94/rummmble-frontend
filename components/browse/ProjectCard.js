@@ -14,15 +14,16 @@ export default function ProjectCard({
 }) {
   return (
     <div>
-      <ProjectThumbnail thumbnailSrc={thumbnailSrc} />
-      <ProjectInformation
-        title={title}
-        description={description}
-        tags={tags}
-        numOfComments={numOfComments}
-        numOfLikes={numOfLikes}
-        numOfShares={numOfShares}
-      />
+      <ProjectThumbnail thumbnailSrc={thumbnailSrc}>
+        <ProjectInformation
+          title={title}
+          description={description}
+          tags={tags}
+          numOfComments={numOfComments}
+          numOfLikes={numOfLikes}
+          numOfShares={numOfShares}
+        />
+      </ProjectThumbnail>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function ProjectInfoDisplay({ title, amount, iconSrc }) {
   return (
-    <div display="flex flex-col items-center">
+    <div display="flex flex-col items-center justify-evenly">
       <div>
         <img src={iconSrc} />
       </div>

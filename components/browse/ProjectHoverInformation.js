@@ -8,7 +8,7 @@ export default function ProjectHoverInformation({
   numOfShares,
 }) {
   return (
-    <div>
+    <div className="flex justify-evenly items-center h-full">
       <ProjectInfoDisplay title="likes" amount={numOfLikes} />
       <ProjectInfoDisplay title="comments" amount={numOfComments} />
       <ProjectInfoDisplay title="shares" amount={numOfShares} />

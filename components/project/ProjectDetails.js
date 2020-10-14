@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '../Icon';
 
 const ProjectDetails = () => (
   <div className="w-1/3 px-12 font-semibold text-2xl leading-tight text-custom-5-cyan flex flex-col transform md:-translate-y-12 sm:-translate-y-3">
@@ -12,21 +13,21 @@ const ProjectDetails = () => (
         Creator Name
       </a>
     </div>
-    <ul className="w-full flex flex-col mx-auto px-4">
+    <ul className="w-full flex flex-col mx-auto px-4 py-1">
       <li className="text-left my-2 flex items-center">
-        <img src="https://static.thenounproject.com/png/3546194-200.png" alt="demo" className="text-sm w-8 h-8 mr-4" />
+        <Icon icon="view-show" className="text-sm w-6 mr-6" />
         <a href="/">View Demo</a>
       </li>
-      <li className="text-left my-4 flex items-center">
-        <img src="https://static.thenounproject.com/png/800007-200.png" alt="code" className="text-sm w-8 h-8 mr-4" />
+      <li className="text-left my-2 flex items-center">
+        <Icon icon="code" className="text-sm w-6 mr-6" />
         <a href="/">View Code</a>
       </li>
       <li className="text-left my-2 flex items-center">
-        <img src="https://static.thenounproject.com/png/3547568-200.png" alt="likes" className="text-sm w-8 h-8 mr-4" />
+        <Icon icon="heart" className="text-sm w-6 mr-6" />
         0 Likes
       </li>
       <li className="text-left my-2 flex items-center">
-        <img src="https://static.thenounproject.com/png/3546598-200.png" alt="calendar" className="text-sm w-8 h-8 mr-4" />
+        <Icon icon="calendar" className="text-sm w-6 mr-6" />
         May 20, 2020
       </li>
     </ul>

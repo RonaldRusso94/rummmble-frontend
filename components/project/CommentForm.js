@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Icon from '../Icon';
 
 const CommentForm = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -21,12 +22,12 @@ const CommentForm = () => {
           className="p-2 text-lg w-full resize-none rounded-t-md text-black focus:outline-none"
           placeholder="Write something nice..."
         />
-        <div className="w-full flex">
+        <div className="w-full flex text-white">
           <button type="submit" className="flex items-center justify-center w-1/2 rounded-bl-md bg-blue-400 transition duration-150 hover:bg-blue-300 focus:outline-none">
-            <img src="https://static.thenounproject.com/png/3546626-200.png" alt="post" className="m-2 w-6 h-auto" />
+            <Icon icon="edit-pencil" className="m-3 w-5" />
           </button>
           <button type="button" onClick={reset} className="flex items-center justify-center w-1/2 rounded-br-md bg-red-700 transition duration-150 hover:bg-red-600 focus:outline-none">
-            <img src="https://static.thenounproject.com/png/3432156-200.png" alt="delete" className="m-2 w-6 h-auto" />
+            <Icon icon="trash" className="m-3 w-5" />
           </button>
         </div>
       </form>

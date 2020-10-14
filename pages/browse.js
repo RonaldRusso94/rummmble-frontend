@@ -4,7 +4,20 @@ import Head from "next/head";
 import BrowseCategories from "../components/browse/BrowseCategories";
 import Grid from "../components/layout/Grid";
 import Layout from "../components/layout/Layout";
+import ProjectCard from "../components/browse/ProjectCard";
 
+const projects = [
+  {
+    title: "Cooperation app",
+    description:
+      "Do you have trouble staying in touch with your co-workers? Then this is the app for you.",
+    thumbnailSrc: "",
+    tags: ["UI Design", "Web UI", "Travel UI"],
+    numOfComments: 200,
+    numOfLikes: 50,
+    numOfShares: 14,
+  },
+];
 const categories = ["Websites", "Apps", "Analytics", "Portfolios", "E-shops"];
 
 export default function Browse() {
@@ -39,6 +52,18 @@ export default function Browse() {
             </div>
 
             <Grid className="text-white">
+              {projects.map((project, index) => (
+                <ProjectCard
+                  key={`${project.title}-${index}`}
+                  title={project.title}
+                  description={project.description}
+                  thumbnailSrc={project.thumbnailSrc}
+                  tags={project.tags}
+                  numOfComments={project.numOfComments}
+                  numOfLikes={project.numOfLikes}
+                  numOfShares={project.numOfShares}
+                />
+              ))}
               <div>Welcome to rummmble</div>
               <div>this is a test grid</div>
               <div>it works responsively!</div>

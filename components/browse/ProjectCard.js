@@ -1,8 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ProjectThumbnail from "./ProjectThumbnail";
+import ProjectInformation from "./ProjectInformation";
 
-export default function ProjectCard() {
-  return <div></div>;
+export default function ProjectCard({
+  title,
+  description,
+  thumbnailSrc,
+  tags,
+  numOfComments,
+  numOfLikes,
+  numOfShares,
+}) {
+  return (
+    <div>
+      <ProjectThumbnail thumbnailSrc={thumbnailSrc} />
+      <ProjectInformation
+        title={title}
+        description={description}
+        tags={tags}
+        numOfComments={numOfComments}
+        numOfLikes={numOfLikes}
+        numOfShares={numOfShares}
+      />
+    </div>
+  );
 }
 
 ProjectCard.propTypes = {

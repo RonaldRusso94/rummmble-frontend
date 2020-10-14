@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+
+import ProjectHoverInformation from "./ProjectHoverInformation";
 
 export default function ProjectInformation({
   title,
@@ -20,7 +22,7 @@ export default function ProjectInformation({
         {!isHovering ? (
           <p className="">{description}</p>
         ) : (
-          <ProjectInformation
+          <ProjectHoverInformation
             numOfLikes={numOfLikes}
             numOfComments={numOfComments}
             numOfShares={numOfShares}

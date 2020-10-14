@@ -1,8 +1,15 @@
+import React, { useState } from "react";
 import Head from "next/head";
+
+import BrowseCategories from "../components/browse/BrowseCategories";
 import Grid from "../components/layout/Grid";
 import Layout from "../components/layout/Layout";
 
+const categories = ["Websites", "Apps", "Analytics", "Portfolios", "E-shops"];
+
 export default function Browse() {
+  const [searchValue, setSearchValue] = useState("");
+  function handleCategoryChange() {}
   return (
     <div>
       <Head>
@@ -12,18 +19,25 @@ export default function Browse() {
 
       <Layout>
         <main className="h-screen text-center">
-          <div className="mt-16">
-            <h1 className="text-5xl text-white font-medium">Browse Projects</h1>
-            <div className="flex justify-evenly">
-              <ul className="flex text-white justify-between">
-                <li>Websites</li>
-                <li>Apps</li>
-                <li>Analytics</li>
-                <li>Portfolios</li>
-                <li>E-shops</li>
-              </ul>
-              <input placeholder="Search for a project..." />
+          <div className="mt-24">
+            <h1 className="text-6xl text-white font-bold">Browse Projects</h1>
+            <div className="w-3/4 mx-auto">
+              <div className="flex mt-4 justify-center">
+                <BrowseCategories
+                  categories={categories}
+                  handleChange={handleCategoryChange}
+                />
+              </div>
+              <div className="flex justify-end">
+                <input
+                  className="text-lg bg-transparent placeholder-custom-2-gray placeholder-opacity-100 font-medium text-white"
+                  placeholder="Search for a project..."
+                  value={searchValue}
+                  onChange={(event) => setSearchValue(event.target.value)}
+                />
+              </div>
             </div>
+
             <Grid className="text-white">
               <div>Welcome to rummmble</div>
               <div>this is a test grid</div>

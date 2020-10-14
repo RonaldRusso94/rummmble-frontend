@@ -8,25 +8,25 @@ const ProjectDetails = () => (
         alt="PFP"
         className="text-sm w-14 h-14 rounded-sm"
       />
-      <a href="/" className="text-lg text-center">
+      <a href="/profile" className="text-lg text-center">
         Creator Name
       </a>
     </div>
     <ul className="w-full flex flex-col mx-auto px-4">
       <li className="text-left my-2 flex items-center">
-        <img src="/demo.png" alt="demo" className="text-sm w-8 h-8 mr-4 my-2" />
+        <img src="https://static.thenounproject.com/png/3546194-200.png" alt="demo" className="text-sm w-8 h-8 mr-4" />
         <a href="/">View Demo</a>
       </li>
-      <li className="text-left my-2 flex items-center">
-        <img src="/code.png" alt="code" className="text-sm w-8 h-8 mr-4 my-2" />
+      <li className="text-left my-4 flex items-center">
+        <img src="https://static.thenounproject.com/png/800007-200.png" alt="code" className="text-sm w-8 h-8 mr-4" />
         <a href="/">View Code</a>
       </li>
       <li className="text-left my-2 flex items-center">
-        <img src="/likes.png" alt="likes" className="text-sm w-8 h-8 mr-4 my-2" />
+        <img src="https://static.thenounproject.com/png/3547568-200.png" alt="likes" className="text-sm w-8 h-8 mr-4" />
         0 Likes
       </li>
       <li className="text-left my-2 flex items-center">
-        <img src="/calendars.png" alt="calendar" className="text-sm w-8 h-8 mr-4 my-2" />
+        <img src="https://static.thenounproject.com/png/3546598-200.png" alt="calendar" className="text-sm w-8 h-8 mr-4" />
         May 20, 2020
       </li>
     </ul>

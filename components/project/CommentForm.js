@@ -8,14 +8,6 @@ const CommentForm = () => {
     reset();
   };
 
-  /* there's a bug where if any button is pressed on the form, when you
-    resize the textarea, it resizes similar to how you scroll using middle mouse button
-    if instead you replace the button tag with a div tag, this problem doesn't occur
-    not exactly sure what's causing it or why
-  */
-
-  // could replace the "Post" and "Delete" button text with image icons representing them
-
   return (
     <>
       <h2 className="font-semibold text-2xl text-custom-2-gray">
@@ -26,15 +18,15 @@ const CommentForm = () => {
           ref={register}
           rows={3}
           name="comment"
-          className="p-2 text-lg w-full rounded-t-md text-black focus:outline-none"
+          className="p-2 text-lg w-full resize-none rounded-t-md text-black focus:outline-none"
           placeholder="Write something nice..."
         />
         <div className="w-full flex">
-          <button type="submit" className="w-1/2 h-8 rounded-bl-md bg-blue-400 transition duration-150 hover:bg-blue-300 focus:outline-none">
-            Post
+          <button type="submit" className="flex items-center justify-center w-1/2 rounded-bl-md bg-blue-400 transition duration-150 hover:bg-blue-300 focus:outline-none">
+            <img src="https://static.thenounproject.com/png/3546626-200.png" alt="post" className="m-2 w-6 h-auto" />
           </button>
-          <button type="button" onClick={reset} className="w-1/2 h-8 rounded-br-md bg-red-700 transition duration-150 hover:bg-red-600 focus:outline-none">
-            Delete
+          <button type="button" onClick={reset} className="flex items-center justify-center w-1/2 rounded-br-md bg-red-700 transition duration-150 hover:bg-red-600 focus:outline-none">
+            <img src="https://static.thenounproject.com/png/3432156-200.png" alt="delete" className="m-2 w-6 h-auto" />
           </button>
         </div>
       </form>

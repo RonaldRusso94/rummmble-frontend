@@ -8,7 +8,7 @@ most elements here are non functional
 */
 
 export default function ProfileSidebar() {
-  const [src, setSrc] = React.useState("https://images.unsplash.com/photo-1496440737103-cd596325d314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80")
+  const [src, setSrc] = React.useState('https://images.unsplash.com/photo-1496440737103-cd596325d314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
 
   const fileInput = React.createRef();
 
@@ -35,14 +35,14 @@ export default function ProfileSidebar() {
         <ProfilePicture src={src} />
       </div>
       <div className="mt-20 tracking-wide">
-        <p className="mt-8 mb-2 font-bold text-3xl">Marcela Lagil</p>
-        <p className="opacity-75 font-light text-2xl">UX Designer</p>
+        <p className="mt-16 mb-2 font-bold text-3xl">Marcela Lagil</p>
+        <p className="mb-16 opacity-75 tracking-wider font-light text-2xl">UX Designer</p>
         <div className="mt-10 flex flex-col items-center text-xl">
           <button
             type="button"
             onClick={() => document.getElementById('inputAvatarFile').click()}
             onChange={changeAvatar}
-            className="mb-6 px-10 py-3 tracking-wider font-semibold rounded-full bg-custom-5-cyan text-custom-0-dblue focus:outline-none"
+            className="mb-6 px-10 py-3 tracking-wider font-semibold rounded-full bg-custom-5-cyan text-custom-0-dblue shadow-xl focus:outline-none"
           >
             Upload New Avatar
             <input accept="image/*" ref={fileInput} id="inputAvatarFile" type="file" className="hidden" />
@@ -50,17 +50,17 @@ export default function ProfileSidebar() {
           <button
             type="button"
             onClick={deleteAvatar}
-            className="px-10 py-3 tracking-widest border border-custom-5-cyan font-light rounded-full bg-custom-0-dblue text-custom-5-cyan focus:outline-none"
+            className="px-10 py-3 tracking-widest border border-custom-5-cyan font-light rounded-full bg-custom-0-dblue text-custom-5-cyan shadow-xl focus:outline-none"
           >
             Delete
           </button>
         </div>
       </div>
 
-      <hr className="w-2/3 border-t-2 border-gray-700 mt-6 mb-4" />
+      <hr className="w-2/3 border-t-2 border-gray-700 mt-10 mb-4" />
 
-      <p className="text-center tracking-widest font-semibold text-2xl mb-2">Profile</p>
-      <ul className="w-1/2 tracking-wider font-thin flex flex-col text-xl">
+      <ul className="w-7/12 tracking-wider font-thin flex flex-col text-xl">
+        <p className="text-center tracking-widest font-semibold text-2xl my-4">Profile</p>
         <li className="my-2 flex items-center">
           <img src="https://static.thenounproject.com/png/343422-200.png" alt="bio" className="text-sm w-8 h-8 mr-4" />
           <p className="text-custom-5-cyan">Enter a Bio</p>
@@ -79,10 +79,10 @@ export default function ProfileSidebar() {
         </li>
       </ul>
 
-      <hr className="w-2/3 border-t-2 border-gray-700 mt-6 mb-4" />
+      <hr className="w-2/3 border-t-2 border-gray-700 mt-10 mb-4" />
 
-      <p className="text-center tracking-widest font-semibold text-2xl mb-2">Linked Accounts</p>
-      <ul className="w-2/3 tracking-widest font-light flex flex-col text-lg">
+      <ul className="w-7/12 tracking-widest font-light flex flex-col text-lg">
+        <p className="text-center tracking-widest font-semibold text-2xl my-4">Linked Accounts</p>
         <li className="mt-2 flex items-center">
           <img src="https://static.thenounproject.com/png/1809809-200.png" alt="facebook" className="text-sm w-4 h-4 mr-4" />
           <a href="https://www.facebook.com/" className="text-custom-5-cyan">Facebook</a>

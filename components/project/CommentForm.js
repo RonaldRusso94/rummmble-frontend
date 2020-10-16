@@ -11,7 +11,7 @@ const CommentForm = () => {
 
   return (
     <>
-      <h2 className="font-semibold text-2xl text-custom-2-gray">
+      <h2 className="font-semibold text-2xl text-custom-2-gray text-center sm:text-left">
         0 Comments
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center items-center mt-6">

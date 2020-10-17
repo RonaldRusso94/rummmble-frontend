@@ -3,13 +3,21 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import ProfileBanner from '../components/Profile/ProfileBanner';
 import ProfileSidebar from '../components/Profile/ProfileSidebar';
+import Followers from '../components/Profile/ProfileDetails/Followers';
 
-export default function Profile() {
-  const [profileBannerNav, setProfileBannerNav] = useState('projects');
+const Profile = () => {
+  const [profileBannerNav, setProfileBannerNav] = useState('followers');
 
   useEffect(() => {
     console.log(profileBannerNav);
   }, [profileBannerNav]);
+
+  const content = () => {
+    if (profileBannerNav === 'followers') {
+      return <Followers />;
+    }
+    // return <Followers />;
+  };
 
   return (
     <div>
@@ -24,7 +32,10 @@ export default function Profile() {
             profileBannerNav={profileBannerNav}
             setProfileBannerNav={setProfileBannerNav}
           />
-          <ProfileSidebar />
+          <div className="flex flex-row w-full">
+            <ProfileSidebar />
+            {content()}
+          </div>
         </main>
       </Layout>
 
@@ -34,3 +45,5 @@ export default function Profile() {
     </div>
   );
 }
+
+export default Profile;

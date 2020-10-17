@@ -1,10 +1,10 @@
-export default function ProfilePicture() {
+export default function ProfilePicture({ src }) {
   return (
-    <div className="h-24 w-24 mt-12">
+    <div className="h-40 w-40">
       <img
         alt="Profile Icon"
-        className="h-full w-full object-cover rounded-lg"
-        src="https://images.unsplash.com/photo-1496440737103-cd596325d314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+        className="h-full w-full object-cover rounded-3xl bg-white"
+        src={src}
       />
     </div>
   );

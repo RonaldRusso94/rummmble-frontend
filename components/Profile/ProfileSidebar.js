@@ -30,7 +30,7 @@ export default function ProfileSidebar() {
   };
 
   return (
-    <div className="relative w-72 sm:w-72 md:w-96 lg:w-128 flex flex-col items-center pb-52">
+    <div className="relative w-full sm:w-72 md:w-96 lg:w-128 flex flex-col items-center pb-52">
       <div className="absolute top-0 transform -translate-y-24">
         <ProfilePicture src={src} />
       </div>

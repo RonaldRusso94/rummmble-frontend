@@ -10,6 +10,7 @@
   "dependencies": {
     "@tailwindcss/ui": "^0.6.2",
     "next": "9.5.4",
+    "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "tailwindcss": "^1.8.12"

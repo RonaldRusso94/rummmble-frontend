@@ -3,7 +3,8 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import ProfileBanner from '../components/Profile/ProfileBanner';
 import ProfileSidebar from '../components/Profile/ProfileSidebar';
-import Followers from '../components/Profile/ProfileDetails/Followers';
+import ProfileCard from '../components/Profile/ProfileDetails/ProfileCard.js';
+import ProjectCard from '../components/Profile/ProfileDetails/ProjectCard.js';
 
 const Profile = () => {
   const [profileBannerNav, setProfileBannerNav] = useState('followers');
@@ -12,10 +13,21 @@ const Profile = () => {
     console.log(profileBannerNav);
   }, [profileBannerNav]);
 
+  /* just a placeholder value, have to dynamically load cards in button is clicked at the
+  bottom that says load more/all) if there are large amount */
+  const amount = 20;
+
   const content = () => {
     if (profileBannerNav === 'followers') {
-      return <Followers />;
+      return Array(amount).fill(<ProfileCard />);
     }
+    if (profileBannerNav === 'following') {
+      return Array(amount).fill(<ProfileCard />);
+    }
+    if (profileBannerNav === 'projects') {
+      return Array(amount).fill(<ProjectCard title="Travel Website" description="Do you have trouble staying in touch with your" />);
+    }
+    return undefined;
     // return <Followers />;
   };
 
@@ -31,10 +43,13 @@ const Profile = () => {
           <ProfileBanner
             profileBannerNav={profileBannerNav}
             setProfileBannerNav={setProfileBannerNav}
+            amount={amount}
           />
           <div className="flex flex-row w-full">
             <ProfileSidebar />
-            {content()}
+            <div className="flex-grow w-2/3 flex flex-wrap justify-evenly bg-red-400 py-8 px-2">
+              {content()}
+            </div>
           </div>
         </main>
       </Layout>
@@ -44,6 +59,6 @@ const Profile = () => {
       </footer>
     </div>
   );
-}
+};
 
 export default Profile;

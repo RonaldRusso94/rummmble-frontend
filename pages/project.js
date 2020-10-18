@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-import Project from '../components/project/Project';
+import Project from '../components/Project/Project';
 
 export default function ProjectPage() {
   return (

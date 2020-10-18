@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import Icon from '../Icon';
 
-const CommentForm = () => {
+const CommentForm = ({ comments }) => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = () => {
     // handle data
@@ -11,9 +12,9 @@ const CommentForm = () => {
 
   return (
     <>
-      <h2 className="font-semibold text-2xl text-custom-2-gray text-center sm:text-left">
-        0 Comments
-      </h2>
+      <p className="font-semibold text-2xl text-custom-2-gray text-center sm:text-left">
+        {`${comments} Comments`}
+      </p>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center items-center mt-6">
         <textarea
           ref={register}
@@ -33,6 +34,10 @@ const CommentForm = () => {
       </form>
     </>
   );
+};
+
+CommentForm.propTypes = {
+  comments: PropTypes.number.isRequired,
 };
 
 export default CommentForm;

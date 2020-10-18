@@ -59,7 +59,7 @@ const Profile = () => {
       />
       <div className="flex flex-row w-full">
         <ProfileSidebar />
-        <div className="flex-grow w-2/3 flex flex-wrap justify-evenly bg-red-400 py-8 px-2">
+        <div className="flex-grow w-2/3 flex flex-wrap justify-evenly py-8 px-2">
           {content()}
         </div>
       </div>

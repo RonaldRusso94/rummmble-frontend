@@ -6,7 +6,7 @@ const ProjectCard = ({
   description,
   imgSrc,
 }) => (
-  <div className="w-84 md:w-84 lg:w-96 flex flex-col items-center m-4 bg-red rounded-2xl text-black">
+  <div className="w-84 md:w-84 lg:w-96 flex flex-col items-center m-4 rounded-2xl text-black">
     <div className="w-full flex-col">
       <img
         src={imgSrc}

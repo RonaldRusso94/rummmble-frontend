@@ -39,7 +39,7 @@ const CommentCard = ({ author, content, date }) => {
         <div className="flex flex-grow items-center ml-3">
           <a href="/profile" className="text-sm sm:text-lg font-semibold text-left hover:underline">{author}</a>
         </div>
-        <p className="text-sm w-0 lg:w-auto text-right text-gray-700 flex flex-grow-0 items-center justify-end">{date}</p>
+        <p suppressHydrationWarning className="text-sm w-0 lg:w-auto text-right text-gray-700 flex flex-grow-0 items-center justify-end">{date}</p>
       </div>
       <div id="commentContent" className="w-full px-4 pb-3 overflow-auto break-words">{content}</div>
     </div>

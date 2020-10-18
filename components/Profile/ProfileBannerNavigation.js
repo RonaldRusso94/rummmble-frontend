@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// yeah this things got issues...
-
 const ProfileTab = ({
   setProfileBannerNav, profileBannerNav, tabName, amount,
 }) => (
@@ -14,7 +12,7 @@ const ProfileTab = ({
     >
       {`${tabName} (${amount})`}
       {profileBannerNav === tabName.toLowerCase()
-      && <hr className="absolute bottom-0 border-custom-5-cyan border-b-8 w-full rounded-full" />}
+        && <hr className="absolute bottom-0 border-custom-5-cyan border-b-8 w-full rounded-full" />}
     </button>
   </li>
 );
@@ -29,9 +27,14 @@ ProfileTab.propTypes = {
 const ProfileTabNavigation = ({ setProfileBannerNav, profileBannerNav, amount }) => (
   <div className="absolute bottom-0 w-1/2  right-0">
     <ul className="flex items-center justify-around text-2xl">
-      <ProfileTab setProfileBannerNav={setProfileBannerNav} profileBannerNav={profileBannerNav} tabName="Projects" amount={amount} />
-      <ProfileTab setProfileBannerNav={setProfileBannerNav} profileBannerNav={profileBannerNav} tabName="Followers" amount={amount} />
-      <ProfileTab setProfileBannerNav={setProfileBannerNav} profileBannerNav={profileBannerNav} tabName="Following" amount={amount} />
+      {['Projects', 'Followers', 'Following'].map((tabName) => (
+        <ProfileTab
+          setProfileBannerNav={setProfileBannerNav}
+          profileBannerNav={profileBannerNav}
+          tabName={tabName}
+          amount={amount}
+        />
+      ))}
     </ul>
   </div>
 );

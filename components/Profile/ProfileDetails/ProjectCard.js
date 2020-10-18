@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 const ProjectCard = ({
   title,
   description,
+  imgSrc,
 }) => (
   <div className="w-84 md:w-84 lg:w-96 flex flex-col items-center m-4 bg-red rounded-2xl text-black">
     <div className="w-full flex-col">
       <img
-        src="https://images.unsplash.com/photo-1602808180309-2e0c62986635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1319&q=80"
+        src={imgSrc}
         alt="avatar"
         className="rounded-2xl object-cover"
       />
@@ -23,6 +24,7 @@ const ProjectCard = ({
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;
